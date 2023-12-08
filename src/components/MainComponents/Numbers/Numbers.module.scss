@@ -1,0 +1,141 @@
+@import "../../../styles/var";
+
+.numbers {
+    position: relative;
+
+    padding-bottom: 160px;
+
+    @media (min-width: $md5+px) {
+        padding-bottom: 320px;
+    }
+
+    @media (min-width: $md2+px) {
+        padding-bottom: 160px;
+    }
+}
+
+.numbers__header {
+    margin-bottom: 40px;
+}
+
+.numbers__title {
+    display: block;
+    margin-bottom: 60px;
+
+    color: #FFE0C5;
+
+    text-align: center;
+    text-shadow: 0px 0px 3px #FF871A, 0px 0px 6px #FF871A, 0px 0px 21px #FF871A, 0px 0px 42px #FF871A, 0px 0px 72px #FF871A, 0px 0px 126px #FF871A;
+    font-family: $manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+
+    @media (min-width: $md5+px) {
+        max-width: 650px;
+        margin: 0 auto;
+        font-size: 36px;
+    }
+
+    @media (min-width: $md2+px) {
+        font-size: 40px;
+        line-height: 1;
+    }
+}
+
+.numbers__bg {
+    position: absolute;
+    bottom: -270px;
+    left: 50%;
+    transform: translateX(-50%) scale(.5);
+
+    @media (min-width: $md5+px) {
+        bottom: -160px;
+        transform: translateX(-50%) scale(.7);
+    }
+}
+
+.iconList {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+
+    @media (min-width: $md5+px) {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 610px;
+    }
+
+    @media (min-width: $md2+px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.iconList__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 70px;
+    margin: 8px;
+
+    &:first-child,
+    &:last-child {
+        position: absolute;
+        top: 90px;
+    }
+
+    &:first-child {
+        left: 0;
+    }
+
+    &:last-child {
+        right: 0;
+    }
+
+    @media (min-width: $md5+px) {
+        width: 150px;
+        height: 100px;
+
+        &:first-child,
+        &:last-child {
+            position: absolute;
+            top: 130px;
+        }
+    }
+
+    @media (min-width: $md2+px) {
+        width: 180px;
+        height: 130px;
+
+        &:first-child,
+        &:last-child {
+            position: relative;
+            top: auto;
+            margin-top: 90px;
+        }
+    }
+}
+
+.iconList__img {
+    width: 40px;
+
+    @media (min-width: $md5+px) {
+        width: 60px;
+    }
+
+    @media (min-width: $md2+px) {
+        width: 80px;
+    }
+}

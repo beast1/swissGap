@@ -1,0 +1,203 @@
+@import '../../../styles/var';
+
+.title {
+    margin-bottom: 25px;
+
+    text-align: center;
+    color: #FF8719;
+    font-family: $manrope;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+
+    @media (min-width: $md5+px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: $md2+px) {
+        margin-bottom: 50px;
+        font-size: 40px;
+    }
+}
+
+.tableNav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 360px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (min-width: $md5+px) {
+        max-width: none;
+        //margin-right: -20px;
+    }
+
+    @media (min-width: $md2+px) {
+        max-width: 933px;
+        flex-wrap: nowrap;
+    }
+}
+
+.tableNav__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    padding: 14px 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+
+    color: #FFDEC2;
+    font-family: $roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+
+    background-color: transparent;
+    border-radius: 1000px;
+    box-shadow: inset 0 0 0 2px #FF8719, 0px 0px 3px 0px #FE9839, 0px 0px 11px 0px, 0px 0px 22px 0px #FE9839;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @media (min-width: $md3+px) {
+        margin-right: 70px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &Text {
+        filter: drop-shadow(0px 0px 4px #FF830F) drop-shadow(0px 0px 8px #FF830F) drop-shadow(0px 0px 31px #FF830F);
+    }
+
+    &:hover {
+        color: black;
+        box-shadow: 0px 0px 3px 0px #FE9839, 0px 0px 11px 0px, 0px 0px 22px 0px #FE9839, 0px 0px 38px 0px #FE9839, 0px 0px 66px 0px #FE9839;
+        background: linear-gradient(0deg, #FFE1C5 0%, #FFE1C5 100%), #FF871A;
+
+        .tableNav__itemText {
+            filter: none;
+        }
+    }
+
+    &Current {
+        color: black;
+        cursor: default;
+        background: linear-gradient(0deg, #FFE1C5 0%, #FFE1C5 100%), #FF871A;
+        box-shadow: 0px 0px 3px 0px #FE9839, 0px 0px 11px 0px, 0px 0px 22px 0px #FE9839, 0px 0px 38px 0px #FE9839, 0px 0px 66px 0px #FE9839;
+
+        .tableNav__itemText {
+            filter: none;
+        }
+    }
+}
+
+.thumbnails {
+    position: relative;
+    top: -35px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__item {
+        position: relative;
+        z-index: 2;
+        width: 120px;
+        height: 120px;
+        margin: 0 10px;
+        margin-right: -30px;
+
+        background: transparent;
+        transition: all .5s;
+        cursor: pointer;
+    }
+
+    &__itemImg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    &__itemCurrent {
+        z-index: 3;
+        margin: 0 50px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            transform: translateX(0) scale(2);
+        }
+    }
+}
+
+.tableBlock {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 320px;
+}
+
+.tableWrap {
+    margin: 40px auto 0;
+
+    @media (min-width: $md3+px) {
+        width: 933px;
+        margin: 22px auto 0;
+    }
+}
+
+.table {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+
+    &Show {
+        display: flex;
+    }
+
+    @media (min-width: $md3+px) {
+        flex-direction: row;
+        padding: 60px 65px;
+    }
+}
+
+.table__body + .table__body {
+    @media (min-width: $md3+px) {
+        margin-left: 80px;
+    }
+}
+
+.table__tr {
+    display: flex;
+}
+
+.table__td {
+    display: block;
+    margin: 7px 14px;
+    color: rgba(255, 255, 255, 0.70);
+
+    font-family: $roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+
+    &:nth-child(1) {
+        width: 140px;
+    }
+
+    &:nth-child(2) {
+        width: 230px;
+        color: white;
+    }
+
+    @media (min-width: $md3+px) {
+        font-size: 16px;
+    }
+}

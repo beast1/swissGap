@@ -1,0 +1,75 @@
+@import "../../../styles/var";
+
+.faq {
+    padding-top: 160px;
+    margin-bottom: 80px;
+
+    @media (min-width: $md5+px) {
+        margin-bottom: 120px;
+    }
+
+    @media (min-width: $md2+px) {
+        margin-bottom: 360px;
+    }
+}
+
+.faq__bg {
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    z-index: 1;
+}
+
+.faq__container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $md2+px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.faq__header {
+    @media (min-width: $md2+px) {
+        margin-right: 60px;
+    }
+}
+
+.faq__titleMega {
+    margin-bottom: 10px;
+
+    color: #fff1e5;
+
+    text-shadow: 0px 0px 28px #FF871A, 0px 0px 57px #FF871A, 0px 0px 79px #FF871A, 0px 0px 99px #FF871A, 0px 0px 684px #FF871A, 0px 0px 197px #FF871A;
+    font-family: $manrope;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: .79;
+}
+
+.faq__title {
+    margin-bottom: 20px;
+
+    color: #FF871A;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2.52px;
+    font-family: $manrope;
+    line-height: 140%;
+
+    @media (min-width: $md5+px) {
+        font-size: 34px;
+    }
+
+    @media (min-width: $md3+px) {
+        margin-bottom: 40px;
+    }
+}

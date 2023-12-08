@@ -1,0 +1,337 @@
+@import "../../../styles/var";
+
+.banner {
+    position: relative;
+
+    padding-top: 130px;
+    padding-bottom: 390px;
+
+    color: white;
+
+    overflow: hidden;
+
+    @media (min-width: $md3+px) {
+        min-height: 847px;
+    }
+}
+
+.banner__bgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+
+        display: block;
+        height: 250px;
+        background: linear-gradient(to top, #181818 5%, transparent);
+    }
+}
+
+.banner__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    width: 680px;
+
+    @media (min-width: 680px) {
+        top: -100px;
+        width: 100%;
+    }
+
+    @media (min-width: $md5+px) {
+        top: auto;
+        bottom: -100px;
+        width: 100%;
+    }
+
+    @media (min-width: $md3+px) {
+        display: none;
+    }
+}
+
+.banner__bgDesktopWrap {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media (min-width: $md3+px) {
+        display: block;
+    }
+}
+
+.banner__bgMain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    width: 100%;
+
+    object-fit: cover;
+}
+.banner__imgCenterPlatform {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-30%);
+}
+.banner__imgLeftPlatform {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.banner__imgRightPlatform {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.banner__imgRockWindows {
+    position: absolute;
+    left: 250px;
+    top: 280px;
+    z-index: 2;
+
+    display: block;
+    width: 206px;
+    height: 206px;
+}
+.banner__imgRockApple {
+    position: absolute;
+    left: 530px;
+    top: 410px;
+    z-index: 2;
+
+    display: block;
+    width: 129px;
+    height: 129px;
+}
+.banner__imgRockTesla {
+    position: absolute;
+    right: 445px;
+    top: 370px;
+    z-index: 2;
+
+    display: block;
+    width: 196px;
+    height: 196px;
+}
+.banner__imgRockAmazon {
+    position: absolute;
+    right: 174px;
+    top: 230px;
+    z-index: 2;
+
+    display: block;
+    width: 237px;
+    height: 237px;
+}
+
+.banner__container {
+    position: relative;
+    z-index: 2;
+
+    &.shadowed {
+        .banner__mainTitle {
+            background: linear-gradient(90deg, #FFF 0%, #FF8719 31.25%);
+        }
+
+        .banner__companyTitleText {
+            text-shadow: 0px 0px 28px #FF871A, 0px 0px 57px #FF871A, 0px 0px 199px #FF871A, 0px 0px 199px #FF871A, 0px 0px 184px #FF871A, 0px 0px 119px #FF871A;
+
+            @media (min-width: $md3+px) {
+                text-shadow: 0px 0px 28px #FF871A, 0px 0px 57px #FF871A, 0px 0px 199px #FF871A, 0px 0px 399px #FF871A, 0px 0px 684px #FF871A, 0px 0px 1197px #FF871A;
+            }
+        }
+    }
+}
+
+.banner__content {
+    @media (min-width: $md2+px) {
+        width: 630px;
+        margin-right: 50px;
+    }
+}
+
+.banner__title {
+    margin: 0;
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.banner__companyTitle {
+    display: block;
+    color: #FFF;
+
+    font-family: $manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    @media (min-width: $md5+px) {
+        margin-bottom: 8px;
+        font-size: 36px;
+    }
+
+    @media (min-width: $md2+px) {
+        font-size: 48px;
+    }
+}
+
+.banner__companyTitleText {
+    color: #fffaf8;
+
+    font-family: $manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+
+    @media (min-width: $md5+px) {
+        display: block;
+    }
+
+    @media (min-width: $md3+px) {
+        font-size: 96px;
+        line-height: 1;
+        //text-shadow: 0px 0px 28px #FF871A, 0px 0px 57px #FF871A, 0px 0px 199px #FF871A, 0px 0px 399px #FF871A, 0px 0px 684px #FF871A, 0px 0px 1197px #FF871A;
+    }
+}
+
+.banner__preTitle {
+    display: block;
+
+    color: #23272D;
+    font-family: $manrope;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px; /* 28px */
+    letter-spacing: 1.4px;
+    text-align: center;
+
+    @media (min-width: $md5+px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: $md2+px) {
+        display: block;
+        font-size: 40px;
+    }
+}
+
+.banner__mainTitle {
+    display: block;
+
+    font-family: $manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+
+    //background: linear-gradient(90deg, #FFF 0%, #FF8719 31.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: $md5+px) {
+        font-size: 64px;
+    }
+
+    @media (min-width: $md2+px) {
+        font-size: 96px;
+    }
+}
+
+.banner__controls {
+    display: flex;
+    justify-content: center;
+}
+
+.banner__descrList {
+    margin-bottom: 40px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-family: $roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+
+    @media (min-width: $md2+px) {
+        max-width: 550px;
+        font-size: 16px;
+    }
+}
+
+.banner__descrItem {
+    margin: 0;
+}
+
+.banner__descrItem + .banner__descrItem {
+    margin-top: 16px;
+}
+
+.banner__preview {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+    height: 500px;
+
+    flex-grow: 2;
+
+    @media (min-width: $md5+px) {
+        top: auto;
+        bottom: 0;
+        max-width: 800px;
+        height: 548px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $md2+px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        max-width: none;
+    }
+}
+
+.banner__brands {
+    display: flex;
+    padding-top: 110px;
+}
+
+.banner__brandsItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.banner__brandsImg {
+    object-fit: contain;
+}
