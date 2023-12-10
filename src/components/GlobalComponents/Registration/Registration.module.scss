@@ -1,0 +1,119 @@
+@import "../../../styles/var";
+
+.registration {
+  max-width: 580px;
+  width: 100%;
+  padding: 11px 16px;
+  background: white;
+  filter: drop-shadow(0px 2px 40px rgba(120, 139, 167, 0.22));
+
+  @media (min-width: $md5+px) {
+    padding: 16px 24px;
+  }
+
+  @media (min-width: $md3+px) {
+    padding: 40px 80px;
+  }
+}
+
+.registration__title {
+  display: block;
+  margin-bottom: 20px;
+
+  color: #23272D;
+
+  font-family: $brutal;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: $md5+px) {
+    font-size: 21px;
+  }
+
+  @media (min-width: $md3+px) {
+    font-size: 30px;
+  }
+}
+
+.formItem + .formItem {
+  margin-top: 26px;
+}
+
+.formItemCheckbox {
+  display: flex;
+  margin-bottom: 13px;
+  margin-top: 16px;
+
+  input {
+    position: relative;
+    bottom: -2px;
+    width: auto;
+    margin-right: 10px;
+  }
+}
+
+.formItem__label {
+  display: block;
+
+  color: #23272D;
+
+  font-family: $brutal;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @media (min-width: $md5+px) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $md3+px) {
+    font-size: 20px;
+  }
+}
+
+.formItem__input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(144, 147, 159, 0.83);
+
+  font-family: $brutal;
+  font-size: 11px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: #979797;
+  }
+
+  @media (min-width: $md5+px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $md3+px) {
+    padding: 18px 0;
+    font-size: 25px;
+  }
+}
+
+.formItem__small {
+  color: #23272D;
+
+  font-family: $brutal;
+  font-size: 9px;
+  font-weight: 700;
+
+  @media (min-width: $md5+px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $md3+px) {
+    font-size: 20px;
+  }
+}
+
+.registration__controls {
+  display: flex;
+  justify-content: center;
+}

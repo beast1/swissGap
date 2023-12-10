@@ -27,76 +27,30 @@
   }
 }
 
-.accounts__title {
-  margin: 0;
-  margin-bottom: 40px;
-
-  color: #FFE0C5;
-
-  text-align: center;
-  text-shadow: 0px 0px 3px #FF871A, 0px 0px 6px #FF871A, 0px 0px 21px #FF871A, 0px 0px 42px #FF871A, 0px 0px 72px #FF871A, 0px 0px 126px #FF871A;
-  font-family: $manrope;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-
-  @media (min-width: $md5+px) {
-    font-size: 40px;
-  }
-
-  @media (min-width: $md2+px) {
-    margin-bottom: 60px;
-    font-size: 40px;
-    text-align: left;
-  }
-}
-
 .accounts__subtitle {
-  display: block;
-  margin-bottom: 12px;
-  color: #FFF;
-
-  font-family: $roboto;
-  font-size: 20px;
+  color: #000;
+  font-family: $brutal;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 150%;
-  text-align: center;
+  font-weight: 700;
+  line-height: 60px;
 
-  @media (min-width: $md5+px) {
-    font-size: 32px;
+  b {
+    color: #FF630B;
   }
 
   @media (min-width: $md3+px) {
     font-size: 40px;
-    text-align: left;
   }
 }
 
-.accounts__descr {
-  display: block;
-  margin-bottom: 100px;
-
-  color: #FFF;
-
-  color: rgba(255, 255, 255, 0.70);
-
-  text-align: center;
-  font-family: $roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 150%;
-
-  @media (min-width: $md5+px) {
-    font-size: 16px;
-  }
+.accounts__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 
   @media (min-width: $md3+px) {
-    max-width: 500px;
-    font-size: 20px;
-    text-align: left;
+    margin-bottom: 90px;
   }
 }
 
@@ -116,77 +70,73 @@
 }
 
 .accounts__item {
+  position: relative;
   width: 100%;
-  padding: 40px 20px 48px;
-  padding-top: 90px;
-  margin-top: 74px;
+  padding-bottom: 62px;
 
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.30);
-  backdrop-filter: blur(11px);
+  background: white;
+  box-shadow: 4px 4px 50px 0px rgba(0, 0, 0, 0.13);
+  border-radius: 0px 0px 11px 11px;
+}
+
+.accounts__item + .accounts__item {
+  margin-top: 11px;
 
   @media (min-width: $md5+px) {
-    min-width: 322px;
-    margin-top: 100px;
+    margin-left: 30px;
   }
 
-  @media (min-width: $md2+px) {
-    max-width: 437px;
-    margin-top: 125px;
-    margin-left: 20px;
+  @media (min-width: $md3+px) {
+    margin-left: 108px;
   }
 }
 
 .accounts__itemIcon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  max-width: 100px;
-  filter: drop-shadow(0px 0px 0px #FF871A) drop-shadow(0px 0px 21px #FF871A);
-
-  @media (min-width: $md5+px) {
-    max-width: 140px;
-  }
-
-  @media (min-width: $md2+px) {
-    max-width: 190px;
-    top: -30px;
-  }
+  width: 100%;
+  object-fit: contain;
 }
 
 .accounts__itemTitle {
-  margin: 0;
-  margin-bottom: 24px;
+  padding: 16px 30px;
+  color: #23272D;
 
-  color: #FF8719;
+  text-shadow: 4px 4px 50px rgba(0, 0, 0, 0.13);
+  font-family: $brutal;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
 
-  font-family: $manrope;
+.accounts__itemDate {
+  position: absolute;
+  left: 32px;
+  bottom: 29px;
+
+  color: #636A74;
+
+  text-shadow: 4px 4px 50px rgba(0, 0, 0, 0.13);
+  font-family: $brutal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.accounts__itemViews {
+  position: absolute;
+  right: 32px;
+  bottom: 29px;
+
+  color: #636A74;
+  font-family: $brutal;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 30px;
 
-  @media (min-width: $md5+px) {
-    margin-bottom: 20px;
-    font-size: 24px;
+  b {
+    color: #FF630B;
+    text-shadow: 4px 4px 50px rgba(0, 0, 0, 0.13);
   }
-
-  @media (min-width: $md2+px) {
-    margin-bottom: 12px;
-    font-size: 32px;
-  }
-}
-
-.accounts__itemDescr {
-  color: rgba(255, 255, 255, 0.70);
-
-  font-family: $roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 150%;
 }
 
 .accounts__itemFeatures {

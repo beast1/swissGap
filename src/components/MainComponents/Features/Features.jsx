@@ -18,133 +18,30 @@ gsap.registerPlugin(ScrollTrigger);
 const Features = () => {
     const main = useRef();
 
-    useLayoutEffect(() => {
-        if (document.documentElement.clientWidth > 1220) {
-            const ctx = gsap.context((self) => {
-                const element = self.selector('.gsap-cell-1');
-                gsap.fromTo(element, {
-                    transform: "translate(-200px, -40px)",
-                    scrollTrigger: {
-                        trigger: self.selector(`.gsap-trigger`),
-                    },
-                }, {
-                    transform: "translate(0)",
-                    duration: 2,
-                    transformOrigin: "top left"
-                });
-            }, main);
-            return () => ctx.revert();
-        }
-    }, []);
-
-    useLayoutEffect(() => {
-        if (document.documentElement.clientWidth > 1220) {
-            const ctx = gsap.context((self) => {
-                const element = self.selector('.gsap-cell-2');
-                gsap.fromTo(element, {
-                    transform: "translate(-200px, 40px)",
-                    scrollTrigger: {
-                        trigger: self.selector(`.gsap-trigger`),
-                    },
-                }, {
-                    transform: "translate(0)",
-                    duration: 2,
-                    transformOrigin: "top left"
-                });
-            }, main);
-            return () => ctx.revert();
-        }
-    }, []);
-
-    useLayoutEffect(() => {
-        if (document.documentElement.clientWidth > 1220) {
-            const ctx = gsap.context((self) => {
-                const element = self.selector('.gsap-cell-3');
-                gsap.fromTo(element, {
-                    transform: "translate(200px, -40px)",
-                    scrollTrigger: {
-                        trigger: self.selector(`.gsap-trigger`),
-                    },
-                }, {
-                    transform: "translate(0)",
-                    duration: 2,
-                    transformOrigin: "top left"
-                });
-            }, main);
-            return () => ctx.revert();
-        }
-    }, []);
-
-    useLayoutEffect(() => {
-        if (document.documentElement.clientWidth > 1220) {
-            const ctx = gsap.context((self) => {
-                const element = self.selector('.gsap-cell-4');
-                gsap.fromTo(element, {
-                    transform: "translate(200px, 40px)",
-                    scrollTrigger: {
-                        trigger: self.selector(`.gsap-trigger`),
-                    },
-                }, {
-                    transform: "translate(0)",
-                    duration: 2,
-                    transformOrigin: "top left"
-                });
-            }, main);
-            return () => ctx.revert();
-        }
-    }, []);
-
     return (
         <section className={`${classes.features}`} ref={main}>
-            <div className={`${classes.features__bgWrap}`}>
-                <img className={`${classes.features__bg}`} src={ bg } alt=""/>
-            </div>
             <div className="container">
-                <div className={`gsap-trigger ${classes.features__trigger}`}></div>
-                <div className={`custom-scrollbar ${classes.features__listWrap}`}>
-                    <div className={`${classes.features__list}`}>
-                        <section className={`gsap-cell-1 decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon1 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>Fast and reliable order execution</p>
-                        </section>
+                <div className={`${classes.features__list}`}>
+                    <section className={`${classes.features__item}`}>
+                        <b className={`${classes.features__itemStep}`}>Step 1</b>
+                        <h3 className={`${classes.features__itemTitle}`}>FILL IN THE FORM</h3>
+                        <p className={`${classes.features__itemDescr}`}>Once your registration is accepted, you will automatically become the newest member of Swissgap. Be sure to generate a secure code so that no one can hack your account!</p>
+                    </section>
 
-                        <section className={`decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon2 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>No commissions and tight spreads</p>
-                        </section>
+                    <section className={`${classes.features__item}`}>
+                        <b className={`${classes.features__itemStep}`}>Step 2</b>
+                        <h3 className={`${classes.features__itemTitle}`}>FUND YOUR ACCOUNT</h3>
+                        <p className={`${classes.features__itemDescr}`}>Like any business, you need working capital to get started. So to start profiting with The  Swissgap, you must invest any amount you desire of $500 or more.</p>
+                    </section>
 
-                        <section className={`gsap-cell-3 decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon3 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>Advanced analytical tools</p>
-                        </section>
-
-                        <section className={`gsap-cell-2 decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon4 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>Leverage of up to 1:300</p>
-                        </section>
-
-                        <section className={`decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon5 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>Real-time quotes</p>
-                        </section>
-
-                        <section className={`gsap-cell-4 decoAngleContainer ${classes.features__item}`}>
-                            <div className={`decoAngleTop`}></div>
-                            <div className={`decoAngleBottom`}></div>
-                            <img className={`${classes.features__itemIcon}`} src={ icon6 } alt=""/>
-                            <p className={`${classes.features__itemDescr}`}>Fast and secure withdrawals</p>
-                        </section>
-                    </div>
+                    <section className={`${classes.features__item}`}>
+                        <b className={`${classes.features__itemStep}`}>Step 3</b>
+                        <h3 className={`${classes.features__itemTitle}`}>WAIT FOR A CALLBACK AND YOU ARE DONE</h3>
+                        <p className={`${classes.features__itemDescr}`}>After payment, our manager will call you and provide you with the high-income algorithm. Enjoy accurate hands-free trading with our award-winning algorithm. You can also set up manual trading if you prefer to trade on your own.</p>
+                    </section>
+                </div>
+                <div className={`${classes.features__controls}`}>
+                    <Button>Get started now</Button>
                 </div>
             </div>
         </section>

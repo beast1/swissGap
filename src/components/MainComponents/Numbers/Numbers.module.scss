@@ -14,6 +14,90 @@
     }
 }
 
+.numbers__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numbers__item {
+    max-width: 780px;
+    width: 100%;
+}
+
+.numbers__item + .numbers__item {
+    margin-left: 140px;
+}
+
+.numbers__author {
+    display: block;
+    margin-bottom: 28px;
+
+    color: #FF630B;
+
+    font-family: $brutal;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+}
+
+.numbers__avatar {
+    display: block;
+    width: 124px;
+    height: 124px;
+    margin: 0 auto 42px;
+
+    object-fit: contain;
+
+    @media (min-width: $md3+px) {
+        width: 334px;
+        height: 334px;
+    }
+}
+
+.numbers__position {
+    display: block;
+    color: #FF630B;
+
+    text-align: center;
+    font-family: $brutal;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.numbers__text {
+    color: #000;
+
+    text-align: center;
+    font-family: $brutal;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.numbers__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 74px;
+}
+
+.banner__brands {
+    display: flex;
+    justify-content: center;
+    padding-top: 134px;
+}
+
+.banner__brandsItem {
+    display: flex;
+    align-items: center;
+}
+
+.banner__brandsImg {
+    object-fit: contain;
+}
+
 .numbers__header {
     margin-bottom: 40px;
 }

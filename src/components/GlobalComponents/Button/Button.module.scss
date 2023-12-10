@@ -1,24 +1,28 @@
 @import "../../../styles/var";
 
 .button {
-  padding: 13px 30px;
+  padding: 9px 13px;
   cursor: pointer;
   position: relative;
   display: inline-flex;
-  background: linear-gradient(0deg, #FFE1C5 0%, #FFE1C5 100%), #FF871A;
-  box-shadow: 0px 0px 1px 0px #FE9839, 0px 0px 3px 0px #FE9839, 0px 0px 11px 0px #FE9839, 0px 0px 22px 0px #FE9839, 0px 0px 38px 0px #FE9839, 0px 0px 66px 0px #FE9839;
-  border-radius: 30px;
-  font-family: $roboto;
+  border-radius: 5px;
+  background: #23272D;
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+  color: #FFF;
+  font-family: $brutal;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #181818;
   transition: all 0.3s;
-  border: 1px solid #FFE1C5;
   user-select: none;
 
-  @media (max-width: $md6+px) {
-    font-size: 14px;
+  @media (min-width: $md5+px) {
+    padding: 13px 18px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $md3+px) {
+    padding: 28px 64px;
+    font-size: 30px;
   }
 
   &:hover {

@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import classes from "./Banner.module.scss";
 import Button from '../../GlobalComponents/Button/Button';
+import Registration from '../../GlobalComponents/Registration/Registration';
 
 import imgBrand1 from "../../../assets/img/main/img-brands-1.png";
 import imgBrand2 from "../../../assets/img/main/img-brands-2.png";
@@ -26,6 +27,9 @@ const Banner = () => {
         <section className={`${classes.banner}`} ref={main}>
             <div className={`gsap-banner container ${classes.banner__container}`}>
                 <b className={`${classes.banner__preTitle}`}>Join Us and Start Getting Profit form day one  with Swissgap !</b>
+            </div>
+            <div className={`${classes.banner__registration}`}>
+                <Registration></Registration>
             </div>
             <ul className={`${classes.banner__brands}`}>
                 <li className={`${classes.banner__brandsItem}`}>

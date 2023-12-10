@@ -5,9 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import classes from "./Accounts.module.scss";
 import Button from "../../GlobalComponents/Button/Button";
 
-import icon1 from "../../../assets/img/main/img-accounts-1.png";
-import icon2 from "../../../assets/img/main/img-accounts-2.png";
-import icon3 from "../../../assets/img/main/img-accounts-3.png";
+import icon1 from "../../../assets/img/main/img-cover-1.jpg";
+import icon2 from "../../../assets/img/main/img-cover-2.jpg";
+import icon3 from "../../../assets/img/main/img-cover-3.jpg";
 import bg from "../../../assets/img/main/bg-accounts.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,18 +15,21 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         img: icon1,
-        title: "Discover Traders' Trends",
-        descr: "Want to see what other traders are doing? Simply choose a trend to analyze and reveal the top 10 results based on TradeVerse traders’ activity."
+        title: "Duis aute irure dolor in reprehenderit.",
+        date: "October 2021",
+        views: 1279
     },
     {
         img: icon2,
-        title: "Filter your way",
-        descr: "Want to broaden your search even more? No problem - we've got you covered. Why from numerous filter combinations to get the results you need to empower your strategy."
+        title: "Duis aute irure dolor in reprehenderit.",
+        date: "October 2021",
+        views: 1279
     },
     {
         img: icon3,
-        title: "Analyse the results",
-        descr: "The results are sorted top to bottom and the visual scale shows the relative differences between them. Feel like trading? You can also open a Buy/Sell position right from the same screen."
+        title: "Duis aute irure dolor in reprehenderit.",
+        date: "October 2021",
+        views: 1279
     }
 ];
 
@@ -36,25 +39,24 @@ const Accounts = () => {
     return (
         <section className={`${classes.accounts}`} ref={main}>
             <div className="container">
-                <h2 className={`${classes.accounts__title}`}>Now the world is your oyster!</h2>
-                <b className={`${classes.accounts__subtitle}`}>Navigation is simple</b>
-                <p className={`${classes.accounts__descr}`}>Using your desktop? Just hover over the side-bar menu and you will see +Insights.</p>
+                <header className={`${classes.accounts__header}`}>
+                    <b className={`${classes.accounts__subtitle}`}><b>Most read</b> articles in Forbs</b>
+                    <b className={`${classes.accounts__subtitle}`}><b>Highly trending</b> topic</b>
+                </header>
                 <div className={`${classes.accounts__list}`}>
                     {data.map((item) => {
                         return (
-                            <section className={`decoAngleContainer ${classes.accounts__item}`}>
-                                <div className={`decoAngleTop`}></div>
-                                <div className={`decoAngleBottom`}></div>
+                            <section className={`${classes.accounts__item}`}>
                                 <img className={`${classes.accounts__itemIcon}`} src={ item.img } alt=""/>
                                 <h3 className={`${classes.accounts__itemTitle}`}>{ item.title }</h3>
-                                <p className={`${classes.accounts__itemDescr}`}>{ item.descr }</p>
+                                <p className={`${classes.accounts__itemDate}`}>{ item.date }</p>
+                                <p className={`${classes.accounts__itemViews}`}><b>{ item.views }</b> Views</p>
                             </section>
                         )
                         })
                     }
                 </div>
             </div>
-            <img className={`${classes.accounts__bg}`} src={ bg } alt=""/>
         </section>
     )
 }

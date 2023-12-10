@@ -31,7 +31,6 @@ const HomePage = () => {
         <Header />
         <Banner />
         <Features />
-        <Advantages />
         <Accounts />
         <Numbers/>
         <Footer />
